@@ -1,4 +1,12 @@
 # tndemo
-#Desplegar stack (debe poseer credenciales validas para una cuenta AWS):
+Desplegar stack (debe poseer credenciales validas para una cuenta AWS)
+
+1.- clonar repo:
+git clone git@github.com:jalcalaroot/tndemo.git
+
+2.- Iniciar terraform:
 sudo terraform init
+
+3.- aplicar plan
 sudo terraform apply
+
