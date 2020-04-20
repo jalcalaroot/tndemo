@@ -12,4 +12,4 @@ sudo apt-get install nginx -y
 sudo rm -rf  /var/www/html/index.nginx-debian.html
 sudo touch /var/www/html/index.nginx-debian.html
 sudo echo "Server 01 NGINX" >> /var/www/html/index.nginx-debian.html
-
+echo "instalacion finalizada" >> /home/ubuntu/install.log

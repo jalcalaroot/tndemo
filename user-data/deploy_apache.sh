@@ -12,4 +12,4 @@ sudo apt-get install apache2 -y
 sudo rm -rf  /var/www/html/index.html
 sudo touch /var/www/html/index.html
 sudo echo "Server 02 APACHE" >> /var/www/html/index.html
-
+echo "instalacion finalizada" >> /home/ubuntu/install.log
