@@ -422,7 +422,7 @@ resource "aws_instance" "Server01" {
   vpc_security_group_ids = ["${aws_security_group.ec2_sg.id}"]
   subnet_id = "${aws_subnet.private-subnet-A1.id}"
   instance_type = "t2.small"
-  user_data = "${file("deploy_nginx.sh")}"
+  user_data = "${file("user-data/deploy_nginx.sh")}"
   root_block_device {
   volume_type = "gp2"
   volume_size = 30
@@ -441,7 +441,7 @@ resource "aws_instance" "Server02" {
   vpc_security_group_ids = ["${aws_security_group.ec2_sg.id}"]
   subnet_id = "${aws_subnet.private-subnet-A1.id}"
   instance_type = "t2.small"
-  user_data = "${file("deploy_apache.sh")}"
+  user_data = "${file("user-data/deploy_apache.sh")}"
   root_block_device {
   volume_type = "gp2"
   volume_size = 30
@@ -497,9 +497,6 @@ resource "aws_alb" "main-load-balancer" {
       Name = "main-load-balancer"
     }
 }
-     output "elb_dns_name" {
-     value = "${aws_alb.main-load-balancer.dns_name}"
- }
 
 resource "aws_alb_target_group" "main-target" {
     name                = "main-target"
