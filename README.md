@@ -7,6 +7,9 @@ git clone git@github.com:jalcalaroot/tndemo.git
 2.- Iniciar terraform:
 sudo terraform init
 
-3.- aplicar plan
+3.- Cargar plan:
+sudo terraform plan
+
+4.- Aplicar plan:
 sudo terraform apply
 
